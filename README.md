@@ -10,10 +10,10 @@ In a glance, the overall architecture is organized as:
 
 The complete report regarding the organization and storing of our data is 
 
-## Big Data Management - Report.pdf
+**Big Data Management - Report.pdf**
 
 The complete report regarding the semantic exploitation of the data is 
 
-## Semantic Data Management - Report.pdf
+**Semantic Data Management - Report.pdf**
 
 Finally, a pitch and a Business Plan are presented.
