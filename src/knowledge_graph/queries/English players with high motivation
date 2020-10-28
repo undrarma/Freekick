@@ -1,0 +1,29 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbr:	<http://dbpedia.org/resource/>
+PREFIX dbo:	<http://dbpedia.org/ontology/>
+PREFIX fk: <http://www.semanticweb.org/ontology/football/>
+
+SELECT distinct ?full_name ?age ?height_in_cm ?weight_in_kg ?nation ?league ?general_rating ?soccer_club
+(?mot as ?motivation)
+WHERE{
+    ?player rdf:type fk:Football_player .
+    ?player fk:league ?league .
+    ?player fk:full_name ?full_name .
+    ?player dbo:age ?age .
+    ?player fk:height_cm ?height_in_cm .
+    ?player fk:weight_kg ?weight_in_kg .
+    ?player dbo:age ?age .
+    ?player dbo:nation "England" .
+    ?player fk:rating ?general_rating .
+    ?player fk:plays_in ?soccer_club .
+
+    ?player fk:takes ?test .
+    ?test fk:Stress_Control ?sc .
+    ?test fk:Performance_under_evaluation ?pue .
+    ?test fk:Motivation ?mot .
+    ?test fk:Mental_ability ?ma .
+    ?test fk:Team_Cohesion ?tc .
+
+    FILTER (?mot > 3)
+}
+ORDER BY ASC(?age)

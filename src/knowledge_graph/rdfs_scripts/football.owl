@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontology/football#"
+     xml:base="http://www.semanticweb.org/ontology/football"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontology/football"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/has_account_fb -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/has_account_fb">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/has_account_tw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/has_account_tw">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/football/Account_TW"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/has_favorite_athlete -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/has_favorite_athlete">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/has_favorite_team -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/has_favorite_team">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/plays_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/plays_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/ontology/SoccerClub"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/social_network_fb -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/social_network_fb">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Account_FB"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/resource/Facebook"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/social_network_tw -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/social_network_tw">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Account_TW"/>
+        <rdfs:range rdf:resource="http://dbpedia.org/resource/Twitter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/takes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontology/football/takes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/age -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/age">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://dbpedia.org/ontology/nation -->
+
+    <owl:DatatypeProperty rdf:about="http://dbpedia.org/ontology/nation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Mental_ability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/Mental_ability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Motivation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/Motivation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Performance_under_evaluation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/Performance_under_evaluation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Stress_Control -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/Stress_Control">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Team_Cohesion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/Team_Cohesion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/CPRD_Test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/attribute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/attribute">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/birth_date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/birth_date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/country_league -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/country_league">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/division -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/division">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/full_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/full_name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/hairstyle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/hairstyle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/height_cm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/height_cm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/league -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/league">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/position -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/position">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/preferred_foot -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/preferred_foot">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/sentimentScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/sentimentScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Account_TW"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/squad_number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/squad_number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/weight_kg -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontology/football/weight_kg">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://dbpedia.org/ontology/Athlete -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Athlete"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/SoccerClub -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/SoccerClub"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Facebook -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Facebook"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Football_player -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Football_player">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontology/football/Football_player"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/resource/Test -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Test"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Twitter -->
+
+    <owl:Class rdf:about="http://dbpedia.org/resource/Twitter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Account_FB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/football/Account_FB"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Account_TW -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/football/Account_TW"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/CPRD_Test -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/football/CPRD_Test">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/resource/Test"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontology/football/Football_player -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontology/football/Football_player"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbr:	<http://dbpedia.org/resource/>
+PREFIX dbo:	<http://dbpedia.org/ontology/>
+PREFIX fk: <http://www.semanticweb.org/ontology/football/>
+
+SELECT distinct ?full_name ?age ?height_in_cm ?weight_in_kg ?nation ?general_rating ?soccer_club
+(?sc as ?sentiment_score)
+WHERE{
+    ?player rdf:type fk:Football_player .
+    ?player fk:league "Premier League" .
+    ?player fk:full_name ?full_name .
+    ?player dbo:age ?age .
+    ?player fk:height_cm ?height_in_cm .
+    ?player fk:weight_kg ?weight_in_kg .
+    ?player dbo:age ?age .
+    ?player dbo:nation ?nation .
+    ?player fk:rating ?general_rating .
+    ?player fk:plays_in ?soccer_club .
+    ?player fk:has_account_tw ?twitterAcc .
+    ?twitterAcc fk:sentimentScore ?sc
+} limit 100

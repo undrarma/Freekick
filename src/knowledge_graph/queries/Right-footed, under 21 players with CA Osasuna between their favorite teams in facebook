@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbr:	<http://dbpedia.org/resource/>
+PREFIX dbo:	<http://dbpedia.org/ontology/>
+PREFIX fk: <http://www.semanticweb.org/ontology/football/>
+
+SELECT distinct ?player
+WHERE{
+    ?player rdf:type fk:Football_player .
+    ?player fk:has_account_fb ?player_fb_account .
+    ?player_fb_account fk:has_favorite_team ?team_fb_account .
+    ?team rdf:type dbo:SoccerClub .
+    ?team fk:has_account_fb ?team_fb_account .    
+    ?player dbo:age ?age .
+    ?player fk:preferred_foot ?preferred_foot
+    FILTER(?team = dbr:CA_Osasuna)
+    FILTER(?age < 21)
+    FILTER(?preferred_foot = "Right")
+}
+GROUP BY ?player
+ORDER BY DESC(?favorite_teams)
+LIMIT 10
