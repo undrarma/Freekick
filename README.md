@@ -6,7 +6,7 @@ The project is composed by several parts.
 
 In a glance, the overall architecture is organized as:
 
-
+![Freekick architecture](img/Freekick_Architecture.png)
 
 The complete report regarding the organization and storing of our data is 
 
